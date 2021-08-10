@@ -46,6 +46,6 @@ css-study-wss/(.git)
 
 ## More Channels
 
-📒 [Notion](https://www.notion.so/a9c8cfcc7989496097767b0403ace506)
+📒 [Notion](https://www.notion.so/WSS-HOME-9e1ffc48158646ed9b93d2c8bb5517a4)
 
 ...
