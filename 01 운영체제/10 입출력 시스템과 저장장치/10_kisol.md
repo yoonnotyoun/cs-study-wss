@@ -18,7 +18,7 @@
 
 9. NAS(Network Attached Storage)
 
-10. FCFS
+10. SSTF
 
 11. 블록 SSTF
 
@@ -28,7 +28,7 @@
 
 14. 0
 
-15. 2배
+15. 짝수배
 
 16. 10
 
