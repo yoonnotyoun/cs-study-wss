@@ -4,6 +4,14 @@
 
 ## Members
 
+| 김기솔                                   | 남정현                                   | 이언호                                 | 정현정                                             | 한지윤                                         |
+| ---------------------------------------- | ---------------------------------------- | -------------------------------------- | -------------------------------------------------- | ---------------------------------------------- |
+| [@kimkisol](https://github.com/kimkisol) | [@JJEONG21](https://github.com/JJEONG21) | [@unho-00](https://github.com/unho-00) | [@kellyjung5512](https://github.com/kellyjung5512) | [@yoonnotyoun](https://github.com/yoonnotyoun) |
+
+
+
+**Former Members** (til OS)
+
 |                  김기솔                  |                       김성연                       |                       정현정                       |                     한지윤                     |
 | :--------------------------------------: | :------------------------------------------------: | :------------------------------------------------: | :--------------------------------------------: |
 | [@kimkisol](https://github.com/kimkisol) | [@sungyeon-0975](https://github.com/sungyeon-0975) | [@kellyjung5512](https://github.com/kellyjung5512) | [@yoonnotyoun](https://github.com/yoonnotyoun) |
@@ -40,12 +48,10 @@ css-study-wss/(.git)
 
 [01 운영체제](https://github.com/yoonnotyoun/cs-study-wss/tree/master/01%20%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C)
 
-​	[01 운영체제의 개요](https://github.com/yoonnotyoun/cs-study-wss/tree/master/01%20%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/01%20%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%9D%98%20%EA%B0%9C%EC%9A%94)
-
-
+[02 네트워크](https://github.com/yoonnotyoun/cs-study-wss/tree/master/02%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC)
 
 ## More Channels
 
-📒 [Notion](https://www.notion.so/WSS-HOME-9e1ffc48158646ed9b93d2c8bb5517a4)
+📒 [Notion](https://www.notion.so/CS-fff3a631c80947df9ac7bd7f9ab15099)
 
 ...
