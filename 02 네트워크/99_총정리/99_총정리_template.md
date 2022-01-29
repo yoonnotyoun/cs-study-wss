@@ -114,7 +114,7 @@
 
 ## 7. 응용 계층
 
-1. HTTP 프로토콜이란 무엇인가?
+1. 주요 프로토콜에 대해 간략하게 설명하세요. (HTTP, FTP, SMTP, POP, SNMP, DHCP, TCP, UDP, IP, ARP, RARP, ICMP)
 
    ```
    

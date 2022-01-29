@@ -54,7 +54,7 @@
    보호된 네트워크에서 유일하게 외부의 공격에 노출된 컴퓨터 시스템으로, 내부 네트워크와 외부 네트워크 간의 게이트웨이 역할을 함
    ```
 
-6. ![image-20220124195450540](C:\Users\SSAFY\AppData\Roaming\Typora\typora-user-images\image-20220124195450540.png)
+6. ![image-20220124212211681](C:\Users\SSAFY\AppData\Roaming\Typora\typora-user-images\image-20220124212211681.png)
 
 7. 
 
