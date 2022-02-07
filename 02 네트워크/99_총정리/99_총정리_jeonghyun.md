@@ -278,70 +278,184 @@
 1. TCP와 UDP의 차이에 대해 설명해보세요.
 
    ```
-   
+   TCP, UDP란 TCP/IP의 전송계층에서 사용되는 프로토콜
+   (전송계층: IP에 의해 전달되는 패킷의 오류를 검사하고 재전송 요구 등의 제어를 담당하는 계층)
    ```
+
+   <TCP>
+   Transmission Control Protocol
+
+   <img src="image-20220207185315070.png" alt="image-20220207185315070" style="zoom:50%;" />
+
+   * 신뢰성 요구 상황에서 사용
+   * 연결 지향형
+   * byte stream으로 연결
+   * congestion, **흐름 제어** 
+   * ordered, lower speed
+   * 신뢰성 있는 데이터 전송  -> 안정적
+   * 세그먼트 TCP 패킷
+   * HTTP, Email, File transfer에서 사용
+
+   
+
+   <UDP>
+   User Datagram Protocol
+
+   ![image-20220207185403855](image-20220207185403855.png)
+
+   * 간단한 데이터를 빠른 속도로 전송하고자 하는 애플리케이션에서 사용
+   * TCP와 다르게 일방적 방향
+   * 비 연결지향형 프로토콜
+   * message stream을 통한 연결
+   * 혼잡 제어, 흐름 제어 지원 NO
+   * 순서 보장 X -> 상대적 빠름
+   * 데이터 전송 보장 X
+   * 데이터그램 UDP 패킷
+
+   참고: https://velog.io/@hidaehyunlee/TCP-%EC%99%80-UDP-%EC%9D%98-%EC%B0%A8%EC%9D%B4
+
+   
 
 2. 3-Way-HandShaking에 대해 설명해보세요.
 
+   ![image-20220207191314404](image-20220207191314404.png)
+   
+   ``` 
+   양쪽 모두 데이터 전송 준비가 되었다는 것을 보장, 상대편에 대한 초기 순차일련번호를 얻을 수 있도록 함
+   
+   3단계 연결 성립 과정
+   1. 클라이언트는 서버에 접속을 요청하는 SYN(M) 패킷을 보냄
+   2. 서버는 클라이언트의 요청 패킷을 받고 요청을 수락한다는 ACK(M+1)과 SYN(N)이 설정된 패킷을 발송함
+   3. 클라이언트는 서버의 수락 응답 패킷을 받고 ACK(N+1)을 서버로 보냄
+   연결 끝!
    ```
    
-   ```
+   참고: https://velog.io/@leeesangheee/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.-TCP-3-way-Handshake
 
 ## 7. 응용 계층
 
 1. 주요 프로토콜에 대해 간략하게 설명하세요. (HTTP, FTP, SMTP, POP, SNMP, DHCP, TCP, UDP, IP, ARP, RARP, ICMP)
 
    ```
+   프로토콜은 TCP 응용 계층과 UDP 응용 계층으로 나뉜다.
+   TCP 응용 계층에는 FTP, HTTP, TELNET, SMTP, POP3, IMAP
+   UDP 응용 계층에는 DHCP, SNMP
    
+   FTP: 기본 파일 전송 프로토콜
+   HTTP: 서버와 클라이언트 간에 하이퍼텍스트 문서를 송수신하는 프로토콜
+   SMTP, POP3, IMAP: 클라이언트와 메일 서버, 메일 서버와 메일 서버 간에 이메일 교환하기 위해 사용
+   
+   DHCP: 네트워크의 각 노드에 유일한 IP 주소를 자동으로 할당하고 관리하는 서비스
+   SNMP: 다른 네트워크 장치를 원격에서 관리할 수 있는 간단한 방법을 제공
    ```
 
 2. DHCP에 대해, 동작 과정을 포함하여 설명해주세요.
 
    ```
+   DHCP: 애플리케이션 층의 프로토콜 중 하나로 TCP/IP 설정이 제대로 되어있지 않아 오류가 발생하는 경우를 방지하기 위해 설정을 자동화하는 프로토콜
    
+   <DHCP 동작 과정>
+   DHCP로 IP 주소를 할당할 때, DHCP 클라이언트와 DHCP 서버는 UDP 패킷으로 4가지 메시지를 주고 받는다.
    ```
+   
+   참고: https://ja-gamma.tistory.com/entry/DHCP%EA%B0%9C%EB%85%90%EB%8F%99%EC%9E%91%EC%9B%90%EB%A6%AC
 
 ## 10. 네트워크 보안
 
 1. SSL 인증서 암호와 방식인 비밀키 암호화 방식과 공개키 암호화 기법에 대해 설명해보세요.
 
    ```
+   비밀키 암호화 방식: 대칭 암호 / 인증 과정에 중점
+   * 동일한 키로 암호화, 복호화를 동시에 할 수 있는 방식. 암호화를 하는 측과 복호화를 하는 측이 같은 암호 키를 공유
    
+   공개키 암호화 방식: 비대칭  암호 / 데이터 보안에 중점
+   * 공개키를 통해 암호화한 것은 개인키를 통해 복호화할 수 있고 개인키를 통해서 암호화한 것은 공개키를 통해서 복호화할 수 있다
    ```
+
+   참고: https://kswims.tistory.com/112
 
 2. HTTP와 HTTPS 통신 방식의 차이에 대해 설명해보세요. (암호화되지 않은 프로토콜 vs 암호화된 프로토콜)
 
    ```
+   SSL 인증서의 유무 + TLS 전송 계층 보안 프로토콜을 통한 보안 유지, 검색 엔진 최적화(SEO) + 가속화된 모바일 페이지(AMP)
    
+   HTTP: 암호화 추가되지 않아서 보안에 취약
+   HTTPS: 암호화가 추가되어 안전하게 데이터 주고 받을 수 있음
+   단, 암호화/복호화의 과정이 필요해서 속도가 상대적으로 느리다.(지금은 거의 못 느낌)
    ```
+   
+   참고: https://blog.wishket.com/http-vs-https-%EC%B0%A8%EC%9D%B4-%EC%95%8C%EB%A9%B4-%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%9D%98-%EB%A0%88%EB%B2%A8%EC%9D%B4-%EB%B3%B4%EC%9D%B8%EB%8B%A4/
 
 ## 11. 기타
 
 1. 프록시 서버란 무엇인가?
 
    ```
+   "중계기"
    
+   클라이언트가 자신을 통해서 다른 네트워크 서비스에 간접적으로 접속할 수 있게 해주는 시스템 or 응용 프로그램
    ```
 
 2. REST API에 대해 설명해보세요.
 
    ```
+   Representational State Transfer Application Programming Interface
    
+   REST를 기반으로 서비스 API를 구축한 것
+   API: 해당 어플리케이션을 제어할 수 있게 해주는 중간 인터페이스
+   
+   <설계 규칙>
+     A. URI는 자원(Resource) 를 표현해야 한다
+        1. resource 는 명사
+        2. 소문자 복수형
+        3. GET /members/1
+     B. 자원에 대한 행위는 HTTP Method (GET, PUT, PATCH, DELETE, POST 등)으로 표현한다
+        1. URI 에 HTTP Method 가 들어가면 안된다
+          - GET /members/delete/1 -> DELETE /members/1
+        2. 어떤 행위(Behavior)나 행동(Action) 에 관해서 동사 표현이 들어가면 안된다
+          - GET /members/insert/2 -> POST /members/2
+          - GET /members/show/1 -> GET /members/1
    ```
 
 3. GET과 POST 방식을 비교해주세요.
 
    ```
+   웹 서비스의 소통 수단 = HTTP = 서버와 클라이언트 간에 데이터를 교환하는 방식
+   HTTP에서 가장 많이 사용되는 메서드가 GET과 POST
+   
+   GET과 POST는 클라이언트 요청의 목적을 드러내는 것
+   GET은 자원에 대한 조회를 요청 = 서버에 영향 X / 멱등성을 보장 = 같은 요청에 대해서는 같은 응답을 받는 성질
+   POST는 전송하는 데이터들에 대하여 서버에 반영 = 서버에 영향 O / 리소스를 생성/변경 하기 위해서 설계된 메서드 / 클라이언트가 전송한 데이터가 서버로 들어가야 함
    
    ```
+
+   참고: https://murphymoon.tistory.com/entry/HTTP%EC%9D%98-GET%EA%B3%BC-POST-%EB%A9%94%EC%84%9C%EB%93%9C-%EB%B9%84%EA%B5%90-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%A9%B4%EC%A0%91-%EC%A7%88%EB%AC%B81?category=937331
+
+   <= 꼭 보면 좋을 듯!!
+
+   
 
 4. URL에 www.naver.com을 쳤을 때 일어나는 일들을 설명하세요.
 
    ```
-   (답변 참고: [https://owlgwang.tistory.com/1](https://owlgwang.tistory.com/1))
+   1. 주소 표시줄에 URL 입력하고 엔터
+   2. 웹 브라우저가 URL 해석
+   3. URL 문법에 맞으면 url의 host에 Punycode encoding 적용
+   4. HSTS 목록 로드해서 확인 ( 목록에 있으면 HTTPS로 요청 보냄 )
+   5. DNS 조회
+   6. ARP로 대상의 IP와 MAC address 알아냄
+   7. 대상과 TCP 통신을 통해 socket open
+   8. HTTPS인 경우 Transport Layer Security handshake가 추가 됨
+   9. HTTP 프로토콜로 요청
+   	GET / HTTP/1.1
+       Host: naver.com
+       Connection: close
+       [other headers]
+   10. HTTP 서버가 응답
+   11. 웹 브라우저가 리소스를 그려줌
    ```
 
-
+(답변 참고: [https://owlgwang.tistory.com/1](https://owlgwang.tistory.com/1))
 
 
 
